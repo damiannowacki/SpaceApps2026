@@ -46,6 +46,17 @@
             margin-top: 25px;
             border-radius: 4px;
         }
+        grid-container {
+            display: grid;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: 100vh; /* Full viewport height for demonstration */
+        }
+            
+        grid-item img {
+            max-width: 100%; /* Ensures the image scales properly */
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -92,10 +103,12 @@
         <p>Force, speed, energy, work, momentum, thrust, acceleration</p>
         
     </div>
-
-    <img src="canvas.png">
-    <img src="Designer_small.png">
-        <div class="container">
+    <div class="grid-container">
+        <img src="canvas.png">
+        <img src="Designer_small.png">
+    </div>
+    
+    <div class="container">
         <h2>Game model</h2>
         <h3>Simplifications</h3>
         <ul>
