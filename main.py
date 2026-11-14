@@ -31,7 +31,7 @@ class Game:
         self.rocket_dropdown = pygame.Rect(25, 20, 200, 80)
         self.destination_dropdown = pygame.Rect(730, 20, 250, 50)
 
-        self.rocket_options = ["Falcon 9", "Starship", "SLS"]
+        self.rocket_options = ["Falcon 9", "SLS", "Starship"]
         self.destination_options = ["ISS", "Moon", "Mars"]
 
         self.selected_rocket = "Select Rocket"
@@ -67,9 +67,9 @@ class Game:
                         if pygame.Rect(25, 100, 200, 60).collidepoint(event.pos):
                             self.selected_rocket = "Falcon 9"
                         elif pygame.Rect(25, 160, 200, 60).collidepoint(event.pos):
-                            self.selected_rocket = "Starship"
-                        elif pygame.Rect(25, 220, 200, 60).collidepoint(event.pos):
                             self.selected_rocket = "SLS"
+                        elif pygame.Rect(25, 220, 200, 60).collidepoint(event.pos):
+                            self.selected_rocket = "Starship"
 
                     if self.show_destination_dropdown:
                         if pygame.Rect(775, 100, 200, 60).collidepoint(event.pos):
