@@ -6,7 +6,7 @@ Our team (Damian, Freddie, James and Benjy), took on the Space Mission Design Ga
 I worked on many things, including designing the main startscreen from scratch using Pygame in VS Code. This file is attached as "main.py" inside the repository.
 We also had to break down complex ideas, use real-life physics within the simulation game, and work to turn it into a presentable challenge, within a 3-minute slot, as well as answer questions about the project from the many judges.
 
-The final prototype was many things merged together within Unity, and python code quickly translated into C#. This allowed us to have high-quality 3D physics, which greatly enhanced the simulation. The Unity was a massive part of the overall project and unfortunaly is not within the repo.
+The final prototype was many things merged together within Unity, and python code quickly translated into C#. This allowed us to have high-quality 3D physics, which greatly enhanced the simulation. The Unity aspect was a massive part of the overall project and unfortunaly is not within the repo.
 As well as being a "simulation", we gamified it with Spacecoin, the in-game currency that you can get based on how succesful your launches are (depending on the conidtions you enter, e.g 7500kg mass and 25000kN thrust).
 It also costs Spacecoin to launch your rockets, to further resemble real-life budget constraints. Move detail about this and how we presented it is available in the powerpoint attached within the repository.
 
