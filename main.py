@@ -45,7 +45,7 @@ class Game:
         self.show_rocket_dropdown = False
         self.show_destination_dropdown = False
 
-        self.spacecoin = 0 
+        self.spacecoin = 25
 
         # rocket dict
         self.rocket_prices = {"Falcon 9": 0, "SLS": 250, "Starship": 1000}
