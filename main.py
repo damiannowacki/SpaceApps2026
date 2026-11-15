@@ -36,7 +36,7 @@ class Game:
         self.launch_button = pygame.image.load("Designer.png")
         self.launch_button = pygame.transform.scale(self.launch_button, (400,300))
 
-        self.rocket_options = ["Falcon 9", "SLS", "Starship"]
+        self.rocket_options = ["Falcon 9", "Starship", "P.Orion"]
         self.destination_options = ["Moon", "Mars", "Neptune"]
 
         self.selected_rocket = "Select Rocket"
@@ -48,8 +48,8 @@ class Game:
         self.spacecoin = 0
 
         # rocket dicts
-        self.rocket_prices = {"Falcon 9": 0, "SLS": 250, "Starship": 1000}
-        self.unlocked_rockets = {"Falcon 9": True, "SLS": False, "Starship": False}
+        self.rocket_prices = {"Falcon 9": 0, "Starship": 250, "P.Orion": 1000}
+        self.unlocked_rockets = {"Falcon 9": True, "Starship": False, "P.Orion": False}
         self.unlocked_destinations = {"Moon": True, "Mars": False, "Neptune": False}
 
     def main(self):
@@ -82,19 +82,8 @@ class Game:
                                 self.selected_rocket = "Falcon 9"
                                 self.show_rocket_dropdown = False
                         
-                        # SLS
-                        elif pygame.Rect(25, 160, 220, 60).collidepoint(event.pos):
-                            if self.unlocked_rockets["SLS"]:
-                                self.selected_rocket = "SLS"
-                                self.show_rocket_dropdown = False
-                            elif self.spacecoin >= self.rocket_prices["SLS"]:
-                                self.spacecoin -= self.rocket_prices["SLS"]
-                                self.unlocked_rockets["SLS"] = True
-                                self.selected_rocket = "SLS"
-                                self.show_rocket_dropdown = False
-
                         # Starship
-                        elif pygame.Rect(25, 220, 220, 60).collidepoint(event.pos):
+                        elif pygame.Rect(25, 160, 220, 60).collidepoint(event.pos):
                             if self.unlocked_rockets["Starship"]:
                                 self.selected_rocket = "Starship"
                                 self.show_rocket_dropdown = False
@@ -102,6 +91,17 @@ class Game:
                                 self.spacecoin -= self.rocket_prices["Starship"]
                                 self.unlocked_rockets["Starship"] = True
                                 self.selected_rocket = "Starship"
+                                self.show_rocket_dropdown = False
+
+                        # Project Orion
+                        elif pygame.Rect(25, 220, 220, 60).collidepoint(event.pos):
+                            if self.unlocked_rockets["P.Orion"]:
+                                self.selected_rocket = "P.Orion"
+                                self.show_rocket_dropdown = False
+                            elif self.spacecoin >= self.rocket_prices["P.Orion"]:
+                                self.spacecoin -= self.rocket_prices["P.Orion"]
+                                self.unlocked_rockets["P.Orion"] = True
+                                self.selected_rocket = "P.Orion"
                                 self.show_rocket_dropdown = False
 
                     if self.show_destination_dropdown:
@@ -229,10 +229,10 @@ class Game:
                     name_surf = self.font_small.render(name_str, True, color)
                     self.screen.blit(name_surf, (35, 115 + i * 60))
 
-                    if option == "SLS":
-                        price_x = 55
-                    elif option == "Starship":
-                        price_x = 125
+                    if option == "Starship":
+                        price_x = 132
+                    elif option == "P.Orion":
+                        price_x = 100
                     else:
                         price_x = 140
 
