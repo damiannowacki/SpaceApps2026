@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Launch - Space Mission Design Game</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        color: #e6f4ff;
+        background: linear-gradient(180deg, #020617 0%, #08122b 50%, #020617 100%);
+        background-image:
+            radial-gradient(circle at 20% 20%, rgba(0,150,255,0.15) 0%, transparent 20%),
+            radial-gradient(circle at 80% 40%, rgba(255,255,255,0.08) 0%, transparent 10%);
+        line-height: 1.7;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 60px 20px;
+        border: 1px solid rgba(100,180,255,0.3);
+        border-radius: 20px;
+        background: rgba(10,20,40,0.7);
+        box-shadow: 0 0 40px rgba(0,140,255,0.2);
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: #6ecbff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .section {
+        background: rgba(15,25,50,0.8);
+        border: 1px solid rgba(120,180,255,0.2);
+        border-radius: 16px;
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+
+    .section h2 {
+        color: #7dd3fc;
+        margin-top: 0;
+        border-bottom: 1px solid rgba(125,211,252,0.3);
+        padding-bottom: 10px;
+    }
+
+    ul {
+        padding-left: 25px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .highlight {
+        color: #facc15;
+        font-weight: bold;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #94a3b8;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="hero">
+        <h1>🚀 Launch</h1>
+        <p>
+            Our team is taking on the <span class="highlight">Space Mission Design Game</span> challenge.
+            Pilot a spacecraft through the Solar System and attempt a successful landing on
+            distant astronomical bodies.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Mission Overview</h2>
+        <p>
+            The game challenges players to choose the correct launch time, direction and
+            velocity in order to complete a successful rendezvous with the Moon.
+        </p>
+
+        <p>
+            Trajectory calculations take into account the rotation of the Earth,
+            the Moon's orbit around Earth, spacecraft launch velocity and direction,
+            and the effects of gravity throughout the mission.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>What Does It Do?</h2>
+        <p>
+            This game simulates spacecraft trajectories during missions from Earth to the
+            Moon, Mars and other destinations throughout the Solar System.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>How Does It Work?</h2>
+        <p>
+            Players use <span class="highlight">SpaceCoin</span> to purchase rockets and
+            configure key mission parameters including:
+        </p>
+
+        <ul>
+            <li>Spacecraft mass</li>
+            <li>Engine thrust</li>
+            <li>Launch direction</li>
+            <li>Mission timing</li>
+        </ul>
+
+        <p>
+            After configuring the spacecraft, the player presses
+            <strong>Launch</strong> and observes the simulated flight.
+            Successful missions earn additional SpaceCoin and unlock more
+            challenging destinations.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Educational Benefits</h2>
+        <p>
+            The game introduces players to real spaceflight concepts including:
+        </p>
+
+        <ul>
+            <li>Orbital mechanics and trajectories</li>
+            <li>Gravity and gravitational influence</li>
+            <li>Rotating reference frames</li>
+            <li>Earth and Moon motion</li>
+            <li>Mass versus thrust trade-offs</li>
+        </ul>
+
+        <p>
+            By repeatedly launching missions, players develop an intuitive understanding
+            of the challenges faced by real spacecraft navigating through space.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Technology Used</h2>
+        <p>
+            The user interface was initially developed in <strong>Python</strong>
+            using <strong>Pygame</strong>, before being reimplemented in
+            <strong>C#</strong> within the <strong>Unity Game Engine</strong>.
+        </p>
+
+        <p>
+            The simulation itself runs in Unity, with project files shared and managed
+            through <strong>GitHub</strong>.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Design Considerations</h2>
+        <p>
+            Throughout development, our team focused on the following questions:
+        </p>
+
+        <ul>
+            <li>Will the simulation be realistic?</li>
+            <li>Will the game be engaging and rewarding?</li>
+            <li>Will players learn about trajectories and orbital mechanics?</li>
+            <li>How can we simplify the project while maintaining educational value?</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        🌍 Earth • 🌕 Moon • 🪐 Planets • 🚀 Trajectories • ⭐ Exploration
+    </div>
+
+</div>
+
+</body>
+</html>
