@@ -1,4 +1,20 @@
-Space Apps Challenge 2026, from the Met Office, Exeter
-14th-15th November 2026
+**Space Apps Challenge 2026, from the Met Office, Exeter**
+**14th-15th November 2026**
 
-Our team is taking on the Space Mission Design Game. We aim to design a game where the player targets their space craft towards an astronomical body and tries to successfully land.
+Our team (Damian, Freddie, James and Benjy), took on the Space Mission Design Game Challenge. Our aim was to design a game where the player targets their space craft towards an astronomical body and tries to successfully land.
+
+I worked on many things, including designing the main startscreen from scratch using Pygame in VS Code. This file is attached as "main.py" inside the repository.
+We also had to break down complex ideas, use real-life physics within the simulation game, and work to turn it into a presentable challenge, within a 3-minute slot, as well as answer questions about the project from the many judges.
+
+The final prototype was many things merged together within Unity, and python code quickly translated into C#. This allowed us to have high-quality 3D physics, which greatly enhanced the simulation. This was a massive part of the overall project and unfortunaly is not within the repo.
+As well as being a "simulation", we gamified it with Spacecoin, the in-game currency that you can get based on how succesful your launches are (depending on the conidtions you enter, e.g 7500kg mass and 25000kN thrust).
+It also costs Spacecoin to launch your rockets, to further resemble real-life budget constraints. Move detail about this and how we presented it is available in the powerpoint attached within the repository.
+
+Personally, one of the best things was working as part of a team, face to face, and solving problems together. This experience was invaluable and taught me a lot about how programming works in the real world.
+
+What we would have to do next: 
+Integrate all aspects of the game into one, finished, polished product
+Make the "Angle" of the rocket being launched more accurate, not just a singular vector but a more complex, accurate solution
+Add many more destinations to make the game engaging and lasting, so far we only have a singular "route" of launch, which is from Earth to the moon.
+
+Huge thanks to the amazing team, it was an incredible event and I enjoyed the opportunity very much :)
