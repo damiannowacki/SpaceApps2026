@@ -7,14 +7,14 @@ I worked on many things, including designing the main startscreen from scratch u
 We also had to break down complex ideas, use real-life physics within the simulation game, and work to turn it into a presentable challenge, within a 3-minute slot, as well as answer questions about the project from the many judges.
 
 The final prototype was many things merged together within Unity, and python code quickly translated into C#. This allowed us to have high-quality 3D physics, which greatly enhanced the simulation. The Unity aspect was a massive part of the overall project and unfortunaly is not within the repo.
-As well as being a "simulation", we gamified it with Spacecoin, the in-game currency that you can get based on how succesful your launches are (depending on the conditions you enter, e.g 7500kg mass and 25000kN thrust). The ratio is 5 Spacecoin for every 10,000km succesfully travelled and huge bonuses for succesful landings.
+As well as being a "simulation", we gamified it with Spacecoin, the in-game currency that you can get based on how succesful your launches are (depending on the conditions you enter, e.g 7500kg mass and 25000kN thrust). The ratio is 5 Spacecoin for every 10,000km succesfully travelled and huge bonuses for successful landings.
 It also costs Spacecoin to launch your rockets, to further resemble real-life budget constraints. Move detail about this and how we presented it is available in the powerpoint attached within the repository.
 
-Personally, one of the best things was working as part of a team, face to face, and solving problems together. This experience was invaluable and taught me a lot about how programming works in the real world.
+Personally, one of the best things was working as part of a team, face to face, and solving problems together. This experience was invaluable and taught me a lot about how programmers work in the real world.
 
 What we would have to do next: 
 Integrate all aspects of the game into one, finished, polished product
 Make the "Angle" of the rocket being launched more accurate, not just a singular vector but a more complex, accurate solution
-Add many more destinations to make the game engaging and lasting, so far we only have a singular "route" of launch, which is from Earth to the moon.
+Add many more destinations to make the game engaging and lasting, as so far we only have a singular "route" of launch, which is from Earth to the moon.
 
-Huge thanks to the amazing team, it was an incredible event and I enjoyed the opportunity very much :)
+Huge thanks to the amazing team, it was an incredible event and I enjoyed the opportunity very much :) 
