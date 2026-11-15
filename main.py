@@ -30,6 +30,11 @@ class Game:
 
         self.rocket_dropdown = pygame.Rect(25, 20, 220, 80)
         self.destination_dropdown = pygame.Rect(730, 20, 250, 50)
+        self.launched = False
+        self.launch_button_rect = pygame.Rect(330, 440, 400, 300)
+
+        self.launch_button = pygame.image.load("Designer.png")
+        self.launch_button = pygame.transform.scale(self.launch_button, (400,300))
 
         self.rocket_options = ["Falcon 9", "SLS", "Starship"]
         self.destination_options = ["ISS", "Moon", "Mars"]
@@ -65,6 +70,9 @@ class Game:
                         self.show_rocket_dropdown = not self.show_rocket_dropdown
                     elif self.destination_dropdown.collidepoint(event.pos):
                         self.show_destination_dropdown = not self.show_destination_dropdown
+                    elif self.launch_button_rect.collidepoint(event.pos):
+                        if self.text1 != "" and self.text2 != "" and self.text3 != "" and self.selected_rocket != "Select Rocket" and self.selected_destination != "Select Destination":
+                            self.launched = True
 
                     if self.show_rocket_dropdown:
                         # Falcon 9
@@ -125,6 +133,11 @@ class Game:
                         else:
                             self.text3 += event.unicode
 
+            if not self.launched:
+                self.startscreen()
+            else:
+                print("launched")
+
             self.screen.blit(self.background, (0,0))
             self.startscreen()
             pygame.display.update()
@@ -155,10 +168,6 @@ class Game:
         self.screen.blit(text3, (140, 435))
         
         self.screen.blit(spacecoin_text, (345, 100))
-
-        self.launch_button = pygame.image.load("Designer.png")
-        self.launch_button = pygame.transform.scale(self.launch_button, (400,300))
-
         self.screen.blit(self.launch_button, (330, 440))
 
         self.rocket_dropdown = pygame.Rect(25, 20, 220, 80)
