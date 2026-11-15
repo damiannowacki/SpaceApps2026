@@ -37,7 +37,7 @@ class Game:
         self.launch_button = pygame.transform.scale(self.launch_button, (400,300))
 
         self.rocket_options = ["Falcon 9", "SLS", "Starship"]
-        self.destination_options = ["ISS", "Moon", "Mars"]
+        self.destination_options = ["Moon", "Mars", "Neptune"]
 
         self.selected_rocket = "Select Rocket"
         self.selected_destination = "Select Destination"
@@ -45,11 +45,12 @@ class Game:
         self.show_rocket_dropdown = False
         self.show_destination_dropdown = False
 
-        self.spacecoin = 25
+        self.spacecoin = 0
 
-        # rocket dict
+        # rocket dicts
         self.rocket_prices = {"Falcon 9": 0, "SLS": 250, "Starship": 1000}
         self.unlocked_rockets = {"Falcon 9": True, "SLS": False, "Starship": False}
+        self.unlocked_destinations = {"Moon": True, "Mars": False, "Neptune": False}
 
     def main(self):
         running = True
@@ -104,15 +105,12 @@ class Game:
                                 self.show_rocket_dropdown = False
 
                     if self.show_destination_dropdown:
-                        if pygame.Rect(775, 100, 200, 60).collidepoint(event.pos):
-                            self.selected_destination = "ISS"
-                            self.show_destination_dropdown = False
-                        elif pygame.Rect(775, 160, 200, 60).collidepoint(event.pos):
-                            self.selected_destination = "Moon"
-                            self.show_destination_dropdown = False
-                        elif pygame.Rect(775, 220, 200, 60).collidepoint(event.pos):
-                            self.selected_destination = "Mars"
-                            self.show_destination_dropdown = False
+                        for i, option in enumerate(self.destination_options):
+                            if pygame.Rect(775, 100 + i * 60, 200, 60).collidepoint(event.pos):
+                                if self.unlocked_destinations[option]:
+                                    self.selected_destination = option
+                                    self.show_destination_dropdown = False
+                                break
                 
                 if event.type == pygame.KEYDOWN:
                     if self.active_box == 1:
@@ -250,16 +248,24 @@ class Game:
                 option_rect = pygame.Rect(775, 100 + i * 60, 200, 60)
                 pygame.draw.rect(self.screen, (255, 255, 255), option_rect, 2)
 
-                text = option
                 if option == self.selected_destination:
+                    color = (0, 255, 0)
                     text = "> " + option
+                elif self.unlocked_destinations[option]:
+                    color = (255, 255, 255)
+                    text = option
+                else:
+                    color = (150, 150, 150)
+                    text = option + "-Locked"
 
-                color = (0, 255, 0) if option == self.selected_destination else (255, 255, 255)
+                self.screen.blit(self.font_small.render(text, True, color), (790, 115 + i * 60))
 
-                self.screen.blit(
-                    self.font_small.render(text, True, color),
-                    (790, 115 + i * 60)
-                )
+                y_pos = 115 + i * 60
+                name_str = option
+                if option == self.selected_destination:
+                    name_str = "> " + option
+                name_surf = self.font_small.render(name_str, True, color)
+                self.screen.blit(name_surf, (790, y_pos))
 
     def spacecoin(self, km_travelled):
         spacecoin = 0
