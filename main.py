@@ -223,9 +223,9 @@ class Game:
                     self.screen.blit(name_surf, (35, 115 + i * 60))
 
                     if option == "SLS":
-                        price_x = 135
+                        price_x = 55
                     elif option == "Starship":
-                        price_x = 145
+                        price_x = 125
                     else:
                         price_x = 140
 
